@@ -119,10 +119,10 @@ This is Tab 2
 
 # Images
 
-![Logo](img/logo.png){width=200px}
+![NIT Logo](img/logo_nit.png){width=100px}
 
-```{r, out.width="200px", echo=FALSE, fig.cap="Logo"}
-knitr::include_graphics("img/logo.png")
+```{r, out.width="100px", echo=FALSE, fig.cap="NIT Logo"}
+knitr::include_graphics("img/logo_nit.png")
 ```
 
 
@@ -136,9 +136,9 @@ Read in data and print to HTML. Notice effect of `df_print: paged` option for HT
 
 ```{r}
 # Bike data
-bikes_tbl      <- readRDS("../00_bike_data/bikes_tbl.rds")
-bikeshops_tbl  <- readRDS("../00_bike_data/bikeshops_tbl.rds")
-orderlines_tbl <- readRDS("../00_bike_data/orderlines_tbl.rds")
+bikes_tbl      <- readRDS("D:/Machine_learning(TUHH)/data_products-cpl5238/01_data/bikes_tbl.rds")
+bikeshops_tbl  <- readRDS("D:/Machine_learning(TUHH)/data_products-cpl5238/01_data/bikeshops_tbl.rds")
+orderlines_tbl <- readRDS("D:/Machine_learning(TUHH)/data_products-cpl5238/01_data/orderlines_tbl.rds")
 
 bike_orderlines_tbl <- orderlines_tbl %>%
     left_join(bikes_tbl,     by = c("product_id" = "bike_id")) %>%
@@ -196,7 +196,7 @@ g
 
 __Interactive plots:__ 
 
-- Use `ggplotly()`.
+#- Use `ggplotly()`.
 
 ```{r, out.height="500px", out.width="100%"}
 # ggplotly(g)
